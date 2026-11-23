@@ -22,8 +22,9 @@ Seeder membuat akun administrator dan delapan kelas X/XI untuk jurusan PPLG, DKV
 - Tampilan responsif untuk layar ponsel.
 
 ## Susunan file
+
 - `assets/logo-airlangga.png` — logo sekolah.
-- `config/BaseModel.php` — abstract class induk model dan koneksi PDO.
+- `config/BaseModel.php` — abstract class induk model.
 - `config/database.php` — koneksi database, model OOP, validasi, dan fungsi umum.
 - `layouts/` — header, navigasi, dan footer.
 - `index.php`, `login.php`, `logout.php` — ringkasan dan autentikasi.
@@ -31,13 +32,37 @@ Seeder membuat akun administrator dan delapan kelas X/XI untuk jurusan PPLG, DKV
 - `tap.php`, `rekap.php` — simulasi tap dan rekap presensi.
 - `schema.sql` — struktur database dan seeder.
 - `style.css` — tampilan aplikasi.
-- `docs/erd-presensi.svg` — gambar ERD.
+- `docs/` — ERD dan screenshot halaman aplikasi.
 
-## Struktur database
+## ERD
 
+![ERD Presensi Siswa](docs/erd-presensi.svg)
 
+## Screenshot aplikasi
 
+| Login | Dashboard |
+|---|---|
+| <img src="docs/login.png" alt="Halaman login" width="480"> | <img src="docs/dashboard.png" alt="Dashboard presensi hari ini" width="480"> |
 
+| Kelola kelas | Kelola siswa |
+|---|---|
+| <img src="docs/kelas.png" alt="Halaman kelola kelas" width="480"> | <img src="docs/siswa.png" alt="Halaman kelola siswa" width="480"> |
+
+| Pencarian siswa | Simulasi tap kartu |
+|---|---|
+| <img src="docs/pencarian-siswa.png" alt="Halaman pencarian siswa" width="480"> | <img src="docs/tap-kartu.png" alt="Halaman simulasi tap kartu" width="480"> |
+
+| Presensi hari ini | Rekap presensi |
+|---|---|
+| <img src="docs/presensi-hari-ini.png" alt="Daftar presensi hari ini" width="480"> | <img src="docs/rekap-presensi.png" alt="Halaman rekap presensi" width="480"> |
+
+| Konfirmasi hapus presensi | Presensi setelah log dihapus |
+|---|---|
+| <img src="docs/konfirmasi-hapus-presensi.png" alt="Dialog konfirmasi hapus log" width="480"> | <img src="docs/presensi-terhapus.png" alt="Rekap setelah log dihapus" width="480"> |
+
+| Konfirmasi keluar | Pesan setelah kelas disimpan |
+|---|---|
+| <img src="docs/konfirmasi-keluar.png" alt="Dialog konfirmasi keluar" width="480"> | <img src="docs/kelas-tersimpan.png" alt="Pesan data kelas berhasil disimpan" width="480"> |
 
 ## Aturan data utama
 
