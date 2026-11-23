@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title description">
+  <title id="title">ERD Presensi Siswa dalam notasi Chen</title>
+  <desc id="description">Kelas memiliki banyak siswa, dan satu siswa dapat memiliki banyak catatan presensi.</desc>
+  <defs>
+    <style>
+      .heading { font: 700 30px Arial, sans-serif; fill: #183b65; }
+      .subheading { font: 16px Arial, sans-serif; fill: #62758b; }
+      .shape { fill: #fff; stroke: #26384d; stroke-width: 2.5; }
+      .edge { fill: none; stroke: #26384d; stroke-width: 2; }
+      .entity-label { font: 700 19px Arial, sans-serif; fill: #173b68; }
+      .attribute-label { font: 16px Arial, sans-serif; fill: #26384d; }
+      .primary-key { text-decoration: underline; }
+      .relation-label { font: 16px Arial, sans-serif; fill: #26384d; }
+      .cardinality { font: 700 16px Arial, sans-serif; fill: #173b68; }
+      .note { font: 14px Arial, sans-serif; fill: #62758b; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="720" fill="#fff"/>
+  <text x="60" y="58" class="heading">ERD Presensi Siswa</text>
+  <text x="60" y="86" class="subheading">Relasi utama: satu kelas memiliki banyak siswa, satu siswa memiliki banyak presensi</text>
+
+  <!-- Garis relasi antartabel -->
+  <path class="edge" d="M280 350 L340 350"/>
+  <path class="edge" d="M460 350 L565 350"/>
+  <path class="edge" d="M675 350 L750 350"/>
+  <path class="edge" d="M850 350 L940 350"/>
+
+  <!-- Kardinalitas dan nama relasi -->
+  <text x="294" y="335" class="cardinality">1</text>
+  <text x="445" y="335" class="cardinality">N</text>
+  <text x="690" y="335" class="cardinality">1</text>
+  <text x="925" y="335" class="cardinality">N</text>
+
+  <!-- Entitas -->
+  <rect x="120" y="320" width="160" height="60" rx="7" class="shape"/>
+  <text x="200" y="357" text-anchor="middle" class="entity-label">kelas</text>
+
+  <rect x="565" y="320" width="110" height="60" rx="7" class="shape"/>
+  <text x="620" y="357" text-anchor="middle" class="entity-label">siswa</text>
+
+  <rect x="940" y="320" width="180" height="60" rx="7" class="shape"/>
+  <text x="1030" y="357" text-anchor="middle" class="entity-label">presensi</text>
+
+  <!-- Relasi berbentuk belah ketupat -->
+  <polygon points="400,315 460,350 400,385 340,350" class="shape"/>
+  <text x="400" y="356" text-anchor="middle" class="relation-label">anggota</text>
+
+  <polygon points="800,315 850,350 800,385 750,350" class="shape"/>
+  <text x="800" y="356" text-anchor="middle" class="relation-label">melakukan</text>
+
+  <!-- Atribut kelas -->
+  <path class="edge" d="M200 320 L200 210"/>
+  <ellipse cx="200" cy="175" rx="82" ry="34" class="shape"/>
+  <text x="200" y="181" text-anchor="middle" class="attribute-label primary-key">id_kelas</text>
+
+  <path class="edge" d="M155 380 L105 475"/>
+  <ellipse cx="95" cy="515" rx="88" ry="34" class="shape"/>
+  <text x="95" y="521" text-anchor="middle" class="attribute-label">nama_kelas</text>
+
+  <path class="edge" d="M245 380 L300 475"/>
+  <ellipse cx="310" cy="515" rx="72" ry="34" class="shape"/>
+  <text x="310" y="521" text-anchor="middle" class="attribute-label">jurusan</text>
+
+  <!-- Atribut siswa -->
+  <path class="edge" d="M620 320 L620 210"/>
+  <ellipse cx="620" cy="175" rx="62" ry="34" class="shape"/>
+  <text x="620" y="181" text-anchor="middle" class="attribute-label primary-key">nisn</text>
+
+  <path class="edge" d="M585 380 L520 475"/>
+  <ellipse cx="505" cy="515" rx="66" ry="34" class="shape"/>
+  <text x="505" y="521" text-anchor="middle" class="attribute-label">nama</text>
+
+  <path class="edge" d="M650 380 L700 475"/>
+  <ellipse cx="715" cy="515" rx="70" ry="34" class="shape"/>
+  <text x="715" y="521" text-anchor="middle" class="attribute-label">alamat</text>
+
+  <!-- Atribut presensi -->
+  <path class="edge" d="M1030 320 L1030 210"/>
+  <ellipse cx="1030" cy="175" rx="52" ry="34" class="shape"/>
+  <text x="1030" y="181" text-anchor="middle" class="attribute-label primary-key">id</text>
+
+  <path class="edge" d="M1030 380 L1030 475"/>
+  <ellipse cx="1030" cy="515" rx="105" ry="34" class="shape"/>
+  <text x="1030" y="521" text-anchor="middle" class="attribute-label">tanggal_waktu</text>
+
+  <text x="60" y="650" class="note">Atribut bergaris bawah adalah primary key.</text>
+  <text x="60" y="674" class="note">users adalah tabel pendukung login administrator dan tidak ditampilkan di sini.</text>
+</svg>
